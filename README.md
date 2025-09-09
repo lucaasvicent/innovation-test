@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Innovation Brindes - E-commerce Front-end
 
-## Getting Started
+<img width="2560" height="1392" alt="image" src="https://github.com/user-attachments/assets/3bc59a59-c9be-40b9-b858-a0044fd29d09" />
 
-First, run the development server:
+Este repositório contém o front-end do projeto de e-commerce para a Innovation Brindes. A aplicação foi desenvolvida com **Next.js**, **TypeScript** e **Tailwind CSS**, visando uma plataforma robusta e intuitiva para visualização de produtos e solicitação de cotações.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Repositório
+
+  * **URL:** `https://github.com/lucaasvicent/innovation-test`
+
+## Funcionalidades Implementadas
+
+  * **Autenticação**: O sistema exige que o usuário realize login para acessar a área de produtos, garantindo a segurança.
+  * **Listagem de Produtos**: Exibição dos produtos em uma grade com informações essenciais como nome, código e preço. O layout foi ajustado para um visual mais limpo e alinhado com o design da marca.
+  * **Detalhe Rápido (Modal)**: Ao clicar em "CONFIRA", um modal é exibido com os detalhes completos do produto, incluindo imagem em alta qualidade e descrição.
+  * **Favoritos**: O usuário pode favoritar produtos, e essa informação é persistida localmente.
+  * **Filtros Dinâmicos**: A listagem de produtos pode ser filtrada por:
+      * **Busca com Debounce**: Otimiza a pesquisa por nome ou código.
+      * **Filtro de Favoritos**: Permite visualizar apenas os produtos favoritados.
+      * **Ordenação**: Ordena os produtos por preço (crescente/decrescente) e nome (A-Z/Z-A).
+
+## Tecnologias Utilizadas
+
+  * **Next.js 14**: Framework de React para renderização otimizada e desempenho.
+  * **TypeScript**: Adiciona tipagem estática para um código mais seguro e escalável.
+  * **Tailwind CSS**: Framework utilitário de CSS para um desenvolvimento rápido e flexível.
+  * **Zustand**: Biblioteca de gerenciamento de estado leve.
+  * **SWR**: Hook de React para busca de dados de forma eficiente.
+  * **Axios**: Cliente HTTP para as requisições à API.
+  * **Lucide React**: Conjunto de ícones personalizáveis.
+
+## Como Executar o Projeto
+
+Siga os passos abaixo para configurar e rodar o projeto localmente.
+
+### Pré-requisitos
+
+  * Node.js (versão 18.x ou superior)
+  * npm
+
+### Instalação
+
+1.  Clone o repositório:
+
+    ```bash
+    git clone https://github.com/lucaasvicent/innovation-test.git
+    cd innovation-test
+    ```
+
+2.  Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+### Executando o Servidor de Desenvolvimento
+
+1.  Inicie o servidor local:
+
+    ```bash
+    npm run dev
+    ```
+
+2.  Abra seu navegador e acesse `http://localhost:3000`.
+
+## Estrutura do Projeto
+
+O projeto segue uma estrutura de pastas organizada para facilitar a navegação:
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+/
+├── app/                  # Páginas e rotas da aplicação
+├── components/           # Componentes reutilizáveis (Header, Card, Modal, etc.)
+├── hooks/                # Hooks personalizados
+├── lib/                  # Bibliotecas e utilitários (API, stores, formatação)
+├── public/               # Arquivos estáticos
+└── styles/               # Estilos globais
+```
