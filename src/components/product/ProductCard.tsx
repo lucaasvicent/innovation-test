@@ -79,7 +79,7 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
         
         <button 
           onClick={onViewDetails}
-          className="mt-4 w-full rounded-md bg-green-500 py-2 text-sm font-semibold text-white hover:bg-green-600 transition-colors"
+          className="mt-4 w-full rounded-md bg-green-500 py-2 text-sm font-semibold text-white hover:bg-green-600 transition-colors cursor-pointer"
         >
           CONFIRA
         </button>

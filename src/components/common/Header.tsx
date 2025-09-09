@@ -13,21 +13,23 @@ export default function Header() {
         </div>
 
         <div className="flex items-center space-x-8">
-  
-          <div className="flex items-center space-x-4 text-white">
+          <div className="hidden sm:flex items-center space-x-4 text-white">
             <Phone />
             <Mail />
           </div>
-          <Image
-            src="/perfil-header.jpg"
-            alt={userName}
-            width={80}
-            height={80}
-            className="rounded-4xl"
-          />
-          <div className="text-white">
-            <p className="text-sm font-semibold">{userName}</p>
-            <p className="text-xs">{currentDate}</p>
+
+          <div className="flex flex-col sm:flex-row items-center sm:space-x-3 text-white">
+            <Image
+              src="/perfil-header.jpg"
+              alt={userName}
+              width={80}
+              height={80}
+              className="rounded-4xl mb-2 sm:mb-0"
+            />
+            <div className="text-center sm:text-left">
+              <p className="text-sm font-semibold">{userName}</p>
+              <p className="text-xs">{currentDate}</p>
+            </div>
           </div>
         </div>
       </div>

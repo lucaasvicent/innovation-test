@@ -55,7 +55,7 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
 
           <button
             onClick={toggleFavorite}
-            className="text-gray-400 hover:text-red-500 transition-colors"
+            className="text-gray-400 hover:text-red-500 transition-colors cursor-pointer"
             aria-label={favorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
           >
             {favorite ? (
@@ -86,7 +86,7 @@ export default function ProductDetailModal({ product }: ProductDetailModalProps)
           <div className="text-2xl font-bold text-blue-600">
             {formatCurrency(parseFloat(product.preco))}
           </div>
-          <button className="bg-green-600 text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-green-700 transition-colors">
+          <button className="bg-green-600 text-white font-semibold py-3 px-6 rounded-md shadow-lg hover:bg-green-700 transition-colors cursor-pointer">
             Solicitar Cotação
           </button>
         </div>
