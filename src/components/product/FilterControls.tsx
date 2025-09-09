@@ -3,12 +3,13 @@
 import { useState, useEffect } from 'react';
 import { useDebounce } from '@/hooks/useDebounce';
 
+type SortOption = 'preco_asc' | 'preco_desc' | 'nome_az' | 'nome_za' | null;
 interface FilterControlsProps {
   onSearch: (searchTerm: string) => void;
-  onSort: (sortBy: 'preco_asc' | 'preco_desc' | 'nome_az' | 'nome_za' | null) => void;
+  onSort: (sortBy: SortOption) => void;
   onToggleFavorites: () => void;
   showFavorites: boolean;
-  currentSort: string | null;
+  currentSort: SortOption;
 }
 
 export default function FilterControls({
@@ -42,7 +43,7 @@ export default function FilterControls({
           <span className="text-sm font-medium text-gray-700">Ordenar por:</span>
           <select
             value={currentSort || ''}
-            onChange={(e) => onSort(e.target.value as any)}
+            onChange={(e) => onSort(e.target.value === '' ? null : (e.target.value as SortOption))}
             className="rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 text-sm text-gray-400"
           >
             <option value="">Sem ordenação</option>
@@ -56,9 +57,8 @@ export default function FilterControls({
         <div className="flex items-center gap-2">
           <button
             onClick={onToggleFavorites}
-            className={`flex items-center px-4 py-2 rounded-md transition-colors ${
-              showFavorites ? 'bg-red-500 text-white' : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
-            }`}
+            className={`flex items-center px-4 py-2 rounded-md transition-colors ${showFavorites ? 'bg-red-500 text-white' : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
+              }`}
           >
             <svg
               className={`h-5 w-5 mr-2 ${showFavorites ? 'text-white' : 'text-red-500'}`}

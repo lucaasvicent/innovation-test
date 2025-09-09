@@ -1,8 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { formatCurrency } from '@/lib/utils/formatCurrency';
-import { useFavoritesStore } from '@/lib/store/favoriteStore';
+import Image from 'next/image';
 
 interface ProductCardProps {
   product: {
@@ -21,16 +20,6 @@ interface ProductCardProps {
 const MOCK_COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#6366F1'];
 
 export default function ProductCard({ product, onViewDetails }: ProductCardProps) {
-  const { addFavorite, removeFavorite, isFavorite } = useFavoritesStore();
-  const favorite = isFavorite(product.codigo);
-
-  const toggleFavorite = () => {
-    if (favorite) {
-      removeFavorite(product.codigo);
-    } else {
-      addFavorite(product.codigo);
-    }
-  };
 
   const isProductExclusive = product.isExclusive ?? true;
 
