@@ -45,7 +45,7 @@ export default function LoginPage() {
         Bem-vindo a Innovation Brindes
       </h2>
 
-      <div className="w-full max-w-md rounded-lg -[#83BE06]bg p-8 shadow-lg">
+      <div className="w-full max-w-md rounded-lg bg-[#83BE06] p-8 shadow-lg">
         <form onSubmit={handleLogin} className="space-y-5">
           <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2">
             <UserRound className="h-5 w-5 text-gray-500" />

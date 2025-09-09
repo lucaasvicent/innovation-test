@@ -57,7 +57,7 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
             <span>Gerado pelo nosso sistema</span>
         </div>
 
-        <p className="text-xs text-gray-600 mt-3 line-clamp-2">
+        <p className="text-xs text-gray-600 mt-3 line-clamp-1">
           {product.shortDescription || product.descricao}
         </p>
 
